@@ -5,7 +5,7 @@ var BuildSchema = new Schema({
     bundle_id: {
         type: String,
     },
-    bundle_number: {
+    build_number: {
         type: Number
     },
     created_at: {

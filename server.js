@@ -4,6 +4,11 @@ const http = require('http');
 const bodyParser = require('body-parser');
 
 const app = express();
+const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://localhost/db', { useNewUrlParser: true });
 
 // Parsers for POST data
 app.use(bodyParser.json());
