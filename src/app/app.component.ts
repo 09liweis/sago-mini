@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Sago  Mini  Programming  Challenge';
+  bundleId;
+  buildNum;
 }
