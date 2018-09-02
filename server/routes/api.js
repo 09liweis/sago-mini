@@ -25,8 +25,9 @@ router.get('/read', (req, res) => {
 
 router.post('/set', (req, res) => {
     const bundle_id = req.body.bundle_id;
-    let new_build_number = req.body.new_build_number;
+    let new_build_number = parseInt(req.body.new_build_number);
     let newBuild;
+    console.log(new_build_number);
     Build.findOne({bundle_id: bundle_id}, (err, build) => {
         if (build) {
             if (new_build_number > build.build_number) {

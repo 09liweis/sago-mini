@@ -2,4 +2,8 @@
     width: 100%;
     max-width: 768px;
     margin: auto;
+    text-align: center;
+}
+.form__group {
+
 }
