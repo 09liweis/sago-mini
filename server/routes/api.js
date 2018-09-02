@@ -52,7 +52,25 @@ router.post('/set', (req, res) => {
 });
 
 router.post('/bump', (req, res) => {
-    
+    const bundle_id = req.body.bundle_id;
+    Build.findOne({bundle_id: bundle_id}, (err, build) => {
+        if (build) {
+            build.build_number++;
+            Build.findOneAndUpdate({_id: build._id}, build, {upsert: true}, function(err, updatedBuild) {
+                res.send({build_number: build.build_number});
+            });
+        } else {
+            const newBuild = new Build({
+                bundle_id: bundle_id,
+                build_number: 0
+            });
+            newBuild.save((err, build) => {
+                if (!err && build) {
+                    res.send({build_number: build.build_number});
+                }
+            });
+        }
+    });
 });
 
 module.exports = router;
