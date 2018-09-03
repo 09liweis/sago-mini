@@ -13,4 +13,10 @@
     <button class="form__button" (click)="set()">Set</button>
     <button class="form__button" (click)="bump()">Bump</button>
   </section>
+  <div *ngIf="showError" class="form__error">
+    {{errorMsg}}
+  </div>
+  <div *ngIf="showResult" class="form__result">
+      {{resultMsg}}
+    </div>
 </div>

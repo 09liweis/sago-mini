@@ -1,0 +1,49 @@
+.container {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.form__group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form__label {
+    display: block;
+    margin-bottom: 10px;
+}
+.form__input {
+    width: 100%;
+    padding: 10px;
+}
+.form__button {
+    background: #fb7938;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 2rem;
+    margin-right: 20px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    &:hover {
+        background: #51bdb5;
+    }
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+.form__result {
+    padding: 20px;
+    color: green;
+    border: 1px solid green;
+    margin-top: 20px;
+}
+.form__error {
+    padding: 20px;
+    color: red;
+    border: 1px solid red;
+    margin-top: 20px;
+}
