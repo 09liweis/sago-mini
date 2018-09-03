@@ -8,8 +8,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/db', { useNewUrlParser: true });
-//mongoose.connect('mongodb://heroku_6njptcbp:dg8h3o8v9dpjk1osignqn3ibel@ds125489.mlab.com:25489/heroku_6njptcbp', { useNewUrlParser: true });
+mongoose.connect('mongodb://heroku_6njptcbp:dg8h3o8v9dpjk1osignqn3ibel@ds125489.mlab.com:25489/heroku_6njptcbp', { useNewUrlParser: true });
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
